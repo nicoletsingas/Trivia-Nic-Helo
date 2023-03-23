@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+:root{
+    --btnColor: #6949FD;
+    --HoverBtnColor: #462DB8;
+    --mainBG: #1F1147;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom, var(--mainBG), var(--HoverBtnColor));
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome, .main-pets{
+    width: 420px;
+    height: 350px;
+    background-color: #FFF;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.welcome-input{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+
+.welcome-input h1{
+    margin-bottom: 30px;
+}
+
+.inputName{
+    height: 45px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--HoverBtnColor);
+    outline: none;
+    font-size: 16px;
+}
+
+.welcome-input .inputName:focus{
+    border-color: var(--HoverBtnColor);
+}
+
+.welcomeUser{
+    margin: 20px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+h2.welcomeText{
+    text-align: center;
+}
+
+.main-pets{
+    gap: 30px;
+}
+
+.main-pets, .question-answers{
+    display: flex;
+    flex-direction: column;
+}
+
+.question{
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+li{
+    list-style-type: none;
+}
+
+input[type='radio'], label{   
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+ }
+
+ ul li input[type='radio']:hover, label:hover {
+    cursor: pointer;
+ }
+
+.start, .send, .optionTheme, .back{
+    height: 45px;
+    width: 100%;
+    background-color: var(--btnColor);
+    border-radius: 10px;
+    color: #FFF;
+    border: none;
+    margin: 12px 0px 15px 0px;
+    font-size: 16px;
+}
+
+.start:hover, .send:hover, .optionTheme:hover, .back:hover{
+    background-color: var(--HoverBtnColor);
+    cursor: pointer;
+}
+
+.finalScore{
+  text-align: center;
+  justify-content: center;
+}
+
+.finalScore h2, .finalScore p {
+  margin: 20px 0px 20px 0px;
+}
+
+main .div-icons{
+  text-align: center;
+}
+
+.icon{
+  height: 100px;
+  width: 100px;
+  display: block;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#chooseTheme{
+  display: none;
+}
+
+/* Dogs Theme */
+
+#question-answers-2, #question-answers-3, #back-index-1{
+  display: none;
+}
+
+/* Cats Theme*/
+
+#question-answers-5, #question-answers-6, #back-index-2{
+    display: none;
+}

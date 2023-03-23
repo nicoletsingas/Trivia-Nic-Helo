@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Trívia</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <script src="script.js" defer></script>
+  <main class="main-pets">
+    <h2 class="welcomeText">Bem vindo ao Trívia-Cats!</h2>
+    <div class="question-answers" id="question-answers-4">
+      <p class="question">1) Qual raça de gatos é a mais inteligente?</p>
+      <ul>
+        <li><input type="radio" value="Angorá Turco" id="answer-10" name="race-cat">
+          <label for="answer-10">Angorá Turco</label>
+        </li>
+        <li><input type="radio" value="Persa" id="answer-11" name="race-cat">
+          <label for="answer-11">Persa</label>
+        </li>
+        <li><input type="radio" value="Siamês" id="answer-12" name="race-cat">
+          <label for="answer-12">Siamês</label>
+        </li>
+      </ul>
+      <br>
+      <button id="submit-4" class="send"
+        onclick="checkTheCorrectAnswer('Siamês'); changeVisibleState('question-answers-5', 'question-answers-4')">Responder
+        e ver resultados</button>
+    </div>
+
+    <div class="question-answers" id="question-answers-5">
+      <p class="question">2) Qual é a raça do gato Frajola?</p>
+      <ul>
+        <li>
+          <input type="radio" value="American Shorthair" id="answer-13" name="frajola-race">
+          <label for="answer-13">American Shorthair</label>
+        </li>
+        <li>
+          <input type="radio" value="SRD" id="answer-14" name="frajola-race">
+          <label for="answer-14">SRD</label>
+        </li>
+        <li>
+          <input type="radio" value="British Shorthair" id="answer-15" name="frajola-race">
+          <label for="answer-15">British Shorthair</label>
+        </li>
+      </ul>
+      <br>
+      <button id="submit-5" class="send"
+        onclick="checkTheCorrectAnswer('American Shorthair'); changeVisibleState('question-answers-6', 'question-answers-5')">Responder
+        e ver resultados</button>
+    </div>
+
+    <div class="question-answers" id="question-answers-6">
+      <p class="question">3) Qual é nome da raça de gatos que não tem pelos?</p>
+      <ul>
+        <li><input type="radio" value="Sphynx" id="answer-16" name="sphynx-race">
+          <label for="answer-16">Sphynx</label>
+        </li>
+        <li><input type="radio" value="Persa" id="answer-17" name="sphynx-race">
+          <label for="answer-17">Persa</label>
+        </li>
+        <li><input type="radio" value="SRD" id="answer-18" name="sphynx-race">
+          <label for="answer-18">SRD</label>
+        </li>
+      </ul>
+      <br>
+      <button id="submit-6" class="send"
+        onclick="checkTheCorrectAnswer('Sphynx'); changeVisibleState('back-index-2', 'question-answers-6'); printScoreResult(); changeColor('scoreTotal')">Responder
+        e ver resultados</button>
+    </div>
+
+    <div class="question-answers finalScore" id="back-index-2">
+      <h3> Você acertou <span id="correctQuestion"></span> das 3 perguntas!</h3>
+      <div class="div-icons">
+        <img id="smiley" class="icon" src="icons/smiley_icon.png" alt="icon-smiley-face">
+        <img id="chocked" class="icon" src="icons/shocked_icon.png" alt="icon-chocked-face">
+      </div>
+      <p>Sua pontuação é: <strong><span id="scoreTotal"></span></strong>!</p>
+      <button class="back"><a href="index.html">Voltar ao inicio</a></button>
+    </div>
+
+  </main>
+
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>
